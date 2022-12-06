@@ -22,12 +22,12 @@ class MyApp extends StatelessWidget {
     // Make app full screen
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
 
-    /* TODO RELEASE: Enable landscape lock
+    // TODO RELEASE: Enable landscape lock
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.landscapeLeft,
       DeviceOrientation.landscapeRight,
     ]);
-    */
+    /**/
 
     Wakelock.enable();
 
@@ -111,8 +111,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   updateColors() {
     // TODO RELEASE: Enable color change based on the current hour
-    //switch (now.hour) {
-    switch (testCounter) {
+    switch (now.hour) {
+    //switch (testCounter) {
 
       case 0: // 22-06h > Nit
       case 1:
@@ -130,8 +130,8 @@ class _MyHomePageState extends State<MyHomePage> {
         break;
 
       case 7: // 07h > Albada fosca
-        backgroundColors[0] = Color.fromARGB(210, 115, 64, 75);
-        backgroundColors[1] = Color.fromARGB(255, 253, 96, 81);
+        backgroundColors[0] = const Color.fromARGB(210, 115, 64, 75);
+        backgroundColors[1] = const Color.fromARGB(255, 253, 96, 81);
         textColors[0] = Colors.white70;
         textColors[1] = Colors.white70;
         textColors[2] = Colors.white70;
@@ -139,8 +139,8 @@ class _MyHomePageState extends State<MyHomePage> {
         break;
 
       case 8: // 08h > Albada clara
-        backgroundColors[0] = Color.fromARGB(255, 255, 229, 119);
-        backgroundColors[1] = Color.fromARGB(255, 253, 96, 81);
+        backgroundColors[0] = const Color.fromARGB(255, 255, 229, 119);
+        backgroundColors[1] = const Color.fromARGB(255, 253, 96, 81);
         textColors[0] = Colors.black;
         textColors[1] = Colors.black;
         textColors[2] = Colors.black;
@@ -148,60 +148,60 @@ class _MyHomePageState extends State<MyHomePage> {
         break;
 
       case 9: // 09h > Primera hora
-        backgroundColors[0] = Color.fromARGB(255, 255, 229, 119);
-        backgroundColors[1] = Color.fromARGB(255, 136, 198, 252);
+        backgroundColors[0] = const Color.fromARGB(255, 255, 229, 119);
+        backgroundColors[1] = const Color.fromARGB(255, 136, 198, 252);
         textColors[0] = Colors.black;
         textColors[1] = Colors.black;
         textColors[2] = Colors.black;
         textColors[3] = Colors.black;
         break;
 
-      case 10: // 10h > Matí
-        backgroundColors[0] = Color.fromARGB(255,86, 157, 238);
-        backgroundColors[1] = Color.fromARGB(255, 136, 198, 252);
+      case 10: // 10-11h > Matí
+      case 11:
+        backgroundColors[0] = const Color.fromARGB(255,86, 157, 238);
+        backgroundColors[1] = const Color.fromARGB(255, 136, 198, 252);
         textColors[0] = Colors.black;
         textColors[1] = Colors.black;
         textColors[2] = Colors.black;
         textColors[3] = Colors.black;
         break;
 
-      case 11: // 11-15h > Migdia
-      case 12:
+
+      case 12: // 12-15h > Migdia
       case 13:
       case 14:
       case 15:
-        backgroundColors[0] = Color.fromARGB(255, 25, 158, 243);
-        backgroundColors[1] = Color.fromARGB(255, 136, 198, 252);
+        backgroundColors[0] = const Color.fromARGB(255, 25, 158, 243);
+        backgroundColors[1] = const Color.fromARGB(255, 136, 198, 252);
         textColors[0] = Colors.black;
         textColors[1] = Colors.black;
         textColors[2] = Colors.black;
         textColors[3] = Colors.black;
         break;
 
-      case 16: // 16-18h > Tarda
+      case 16: // 16-17h > Tarda
       case 17:
-      case 18:
-        backgroundColors[0] = Color.fromARGB(255, 255, 229, 119);
-        backgroundColors[1] = Color.fromARGB(255, 136, 198, 252);
+        backgroundColors[0] = const Color.fromARGB(255, 255, 229, 119);
+        backgroundColors[1] = const Color.fromARGB(255, 136, 198, 252);
         textColors[0] = Colors.black;
         textColors[1] = Colors.black;
         textColors[2] = Colors.black;
         textColors[3] = Colors.black;
         break;
 
-      case 19: // 19h > Vespre
-        backgroundColors[0] = Color.fromARGB(255, 254, 192, 81);
-        backgroundColors[1] = Color.fromARGB(255, 253, 96, 81);
+      case 18: // 18-19h > Vespre
+      case 19:
+        backgroundColors[0] = const Color.fromARGB(255, 254, 192, 81);
+        backgroundColors[1] = const Color.fromARGB(255, 253, 96, 81);
         textColors[0] = Colors.black;
         textColors[1] = Colors.black;
         textColors[2] = Colors.black;
         textColors[3] = Colors.black;
         break;
 
-      case 20: // 20h > Vespre enfosquit
-        //backgroundColors[0] = Color.fromARGB(255, 57, 32, 51);
-        backgroundColors[0] = Color.fromARGB(210, 115, 64, 75);
-        backgroundColors[1] = Color.fromARGB(255, 253, 96, 81);
+      case 20: // 20h > Capvespre
+        backgroundColors[0] = const Color.fromARGB(210, 115, 64, 75);
+        backgroundColors[1] = const Color.fromARGB(255, 253, 96, 81);
         textColors[0] = Colors.white;
         textColors[1] = Colors.white;
         textColors[2] = Colors.white;
@@ -209,9 +209,9 @@ class _MyHomePageState extends State<MyHomePage> {
         break;
 
 
-      case 21: // 21h > Capvespre
-        backgroundColors[0] = Color.fromARGB(210, 115, 64, 75);
-        backgroundColors[1] = Color.fromARGB(255, 57, 32, 51);
+      case 21: // 21h > Inici de la nit
+        backgroundColors[0] = const Color.fromARGB(210, 115, 64, 75);
+        backgroundColors[1] = const Color.fromARGB(255, 57, 32, 51);
         textColors[0] = Colors.white70;
         textColors[1] = Colors.white70;
         textColors[2] = Colors.white70;
@@ -232,9 +232,9 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return TimerBuilder.periodic(const Duration(seconds: 1),
+    return TimerBuilder.periodic(const Duration(milliseconds: 500),
         builder: (context) {
-      if (framesElapsed >= 60) {
+      if (framesElapsed >= 120) {
         updateWeather();
         framesElapsed = 0;
       } else {
@@ -283,7 +283,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     children: <Widget>[
                       // Weather icon
                       Image.network(weatherIconURL,
-                          width: sx(75), fit: BoxFit.fitWidth),
+                          width: sx(65), fit: BoxFit.fitWidth),
 
                       // Temperature
                       Text(
@@ -303,7 +303,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     children: <Widget>[
                       // Feels like and Humidity
                       Text(
-                        "($feelsLikeºC // $humidity% // ↑ $maxTempºC // ↓ $minTempºC)".replaceAll('.', ','),
+                        "S: $feelsLikeºC \t H: $humidity% \t ↑ $maxTempºC \t ↓ $minTempºC".replaceAll('.', ','),
                         style: TextStyle(
                           color: textColors[2],
                           fontFamily: 'Helvetica',
@@ -315,7 +315,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
                   // Blank space
                   SizedBox(
-                    height: sy(50),
+                    height: sy(40),
                   ),
 
                   Row(
@@ -337,6 +337,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ),
 
+          /*
           // Button to increment of the counter
           // TODO RELEASE: Disable button
           floatingActionButton: FloatingActionButton(
@@ -358,7 +359,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 fontSize: sx(20),
               ),
             ),
-          ),
+          ),*/
         );
       });
     });
