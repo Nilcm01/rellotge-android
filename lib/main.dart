@@ -112,7 +112,7 @@ class _MyHomePageState extends State<MyHomePage> {
   updateColors() {
     // TODO RELEASE: Enable color change based on the current hour
     switch (now.hour) {
-    //switch (testCounter) {
+    // switch (testCounter) {
 
       case 0: // 22-06h > Nit
       case 1:
@@ -132,10 +132,10 @@ class _MyHomePageState extends State<MyHomePage> {
       case 7: // 07h > Albada fosca
         backgroundColors[0] = const Color.fromARGB(210, 115, 64, 75);
         backgroundColors[1] = const Color.fromARGB(255, 253, 96, 81);
-        textColors[0] = Colors.white70;
-        textColors[1] = Colors.white70;
-        textColors[2] = Colors.white70;
-        textColors[3] = Colors.white70;
+        textColors[0] = Colors.white54;
+        textColors[1] = Colors.white54;
+        textColors[2] = Colors.white54;
+        textColors[3] = Colors.white54;
         break;
 
       case 8: // 08h > Albada clara
@@ -158,7 +158,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
       case 10: // 10-11h > Matí
       case 11:
-        backgroundColors[0] = const Color.fromARGB(255,86, 157, 238);
+        backgroundColors[0] = const Color.fromARGB(255, 86, 157, 238);
         backgroundColors[1] = const Color.fromARGB(255, 136, 198, 252);
         textColors[0] = Colors.black;
         textColors[1] = Colors.black;
@@ -166,11 +166,8 @@ class _MyHomePageState extends State<MyHomePage> {
         textColors[3] = Colors.black;
         break;
 
-
-      case 12: // 12-15h > Migdia
+      case 12: // 12-13h > Migdia
       case 13:
-      case 14:
-      case 15:
         backgroundColors[0] = const Color.fromARGB(255, 25, 158, 243);
         backgroundColors[1] = const Color.fromARGB(255, 136, 198, 252);
         textColors[0] = Colors.black;
@@ -179,8 +176,8 @@ class _MyHomePageState extends State<MyHomePage> {
         textColors[3] = Colors.black;
         break;
 
-      case 16: // 16-17h > Tarda
-      case 17:
+      case 14: // 14-15h > Inici de la tarda
+      case 15:
         backgroundColors[0] = const Color.fromARGB(255, 255, 229, 119);
         backgroundColors[1] = const Color.fromARGB(255, 136, 198, 252);
         textColors[0] = Colors.black;
@@ -189,8 +186,8 @@ class _MyHomePageState extends State<MyHomePage> {
         textColors[3] = Colors.black;
         break;
 
-      case 18: // 18-19h > Vespre
-      case 19:
+      case 16: // 16-17h > Mitja tarda
+      case 17:
         backgroundColors[0] = const Color.fromARGB(255, 254, 192, 81);
         backgroundColors[1] = const Color.fromARGB(255, 253, 96, 81);
         textColors[0] = Colors.black;
@@ -199,7 +196,7 @@ class _MyHomePageState extends State<MyHomePage> {
         textColors[3] = Colors.black;
         break;
 
-      case 20: // 20h > Capvespre
+      case 18: // 20h > Vespre
         backgroundColors[0] = const Color.fromARGB(210, 115, 64, 75);
         backgroundColors[1] = const Color.fromARGB(255, 253, 96, 81);
         textColors[0] = Colors.white;
@@ -208,18 +205,44 @@ class _MyHomePageState extends State<MyHomePage> {
         textColors[3] = Colors.white;
         break;
 
-
-      case 21: // 21h > Inici de la nit
+      case 19: // 20h > Capvespre
         backgroundColors[0] = const Color.fromARGB(210, 115, 64, 75);
         backgroundColors[1] = const Color.fromARGB(255, 57, 32, 51);
+        textColors[0] = Colors.white;
+        textColors[1] = Colors.white;
+        textColors[2] = Colors.white;
+        textColors[3] = Colors.white;
+        break;
+
+      case 20:  // 20h > Inici de la nit (opacitat: 70%)
+        backgroundColors[0] = Colors.black;
+        backgroundColors[1] = Colors.black;
         textColors[0] = Colors.white70;
         textColors[1] = Colors.white70;
         textColors[2] = Colors.white70;
         textColors[3] = Colors.white70;
         break;
 
-      case 22: // 22-06h > Nit
-      case 23:
+
+      case 21: // 21h > Nit (opacitat: 54%)
+        backgroundColors[0] = Colors.black;
+        backgroundColors[1] = Colors.black;
+        textColors[0] = Colors.white54;
+        textColors[1] = Colors.white54;
+        textColors[2] = Colors.white54;
+        textColors[3] = Colors.white54;
+        break;
+
+      case 22: // 22h > Nit (opacitat: 38%)
+        backgroundColors[0] = Colors.black;
+        backgroundColors[1] = Colors.black;
+        textColors[0] = Colors.white38;
+        textColors[1] = Colors.white38;
+        textColors[2] = Colors.white38;
+        textColors[3] = Colors.white38;
+        break;
+
+      case 23: // 23-06h > Nit (opacitat: 30%)
         backgroundColors[0] = Colors.black;
         backgroundColors[1] = Colors.black;
         textColors[0] = Colors.white30;
@@ -337,29 +360,29 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ),
 
-          /*
-          // Button to increment of the counter
-          // TODO RELEASE: Disable button
-          floatingActionButton: FloatingActionButton(
-            onPressed: () {
-              setState(() {
-                if (testCounter < 23) {
-                  testCounter++;
-                } else {
-                  testCounter = 0;
-                }
-              });
-            },
-            tooltip: 'Increment',
-            child: Text(
-              testCounter.toString(),
-              style: TextStyle(
-                color: Colors.white,
-                fontFamily: 'Helvetica',
-                fontSize: sx(20),
-              ),
-            ),
-          ),*/
+
+          // // Button to increment of the counter
+          // // TODO RELEASE: Disable button
+          // floatingActionButton: FloatingActionButton(
+          //   onPressed: () {
+          //     setState(() {
+          //       if (testCounter < 23) {
+          //         testCounter++;
+          //       } else {
+          //         testCounter = 0;
+          //       }
+          //     });
+          //   },
+          //   tooltip: 'Increment',
+          //   child: Text(
+          //     testCounter.toString(),
+          //     style: TextStyle(
+          //       color: Colors.white,
+          //       fontFamily: 'Helvetica',
+          //       fontSize: sx(20),
+          //     ),
+          //   ),
+          // ),
         );
       });
     });
